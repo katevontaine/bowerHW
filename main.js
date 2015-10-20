@@ -57,13 +57,12 @@ document.querySelector('#answer4').innerHTML = (item.title)
 
 var materials = _.pluck(items, "materials");
 
-var morethan8 = _.filter(materials.length > 8 || materials.length == 8)
-  function(){
-    return materials.title, materials.quantity, materials.materials;
-    console.log(items.title, items.quantity, items.materials);
-  });
+var morethan8 = items.filter(function(materials.title, idx, arr)
+{ if (items.materials.length >=8)
+  return materials.title + " " + materials.quantity " " + materials.materials);
 
-// ??????
+});
+
 
 // document.querySelector('#answer5').innerHTML =
 
