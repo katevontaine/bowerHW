@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 //ANSWER1
 var itemPrice = items.forEach(function(item, idx, arr){
 console.log(item.price);
@@ -13,35 +15,41 @@ function avgPrice(){
 }
 console.log(avgPrice);
 
-document.querySelector('#answer1').innerHTML = "<p>The average price is " + avgPrice(); + ".</p>";
-
-
-
-
-// function sum(x,y)
-// {
-//   console.log(arguments);
-//   if (typeof x ==="number" && typeof y === "number")
-//     console.log( x + y)
-//    return x+y;
-//
-// }
-
-
+$('#answer1').text(avgPrice);
 
 
 //ANSWER2
-// document.querySelector('#answer2').innerHTML =
-
+items.forEach(function (item, idx, arr){
+  if (item.price > 14 && item.price < 18){
+    console.log(item.title + item.price);
+  }
+  document.querySelector('#answer2').innerHTML += item.title + item.price;
+});
+// $('#answer2').text(item.title + item.price);
+// $('#answer2').text("sjdfnwsjfn");
+// document.querySelector('#answer2').innerHTML += item.title + item.price;
 
 
 //ANSWER3
-// document.querySelector('#answer3').innerHTML =
+var itemCurr = items.forEach(function(item, idx, arr){
+console.log(item.currency_code);
+});
 
+var itemCurrGBP = items.filter(function(item, idx){
+  return item.currency_code === "GBP";
+});
 
+itemCurrGBP[0].title
+
+document.querySelector('#answer3').innerHTML = itemCurrGBP[0].title + itemCurrGBP[0].price
 
 
 //ANSWER4
+
+
+
+
+
 // document.querySelector('#answer4').innerHTML =
 
 
@@ -65,3 +73,6 @@ document.querySelector('#answer1').innerHTML = "<p>The average price is " + avgP
 // _.times(100, function() {
 //   console.log("hi");
 // });
+
+
+});
