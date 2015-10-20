@@ -45,30 +45,37 @@ document.querySelector('#answer3').innerHTML = itemCurrGBP[0].title + itemCurrGB
 
 
 //ANSWER4
+var itemWood = items.forEach(function(item, idx, arr){
+console.log(item.materials.wood);
+console.log(item.title);
 
+document.querySelector('#answer4').innerHTML = (item.title)
 
+});
 
+//ANSWER5 ??????????
 
+var materials = _.pluck(items, "materials");
 
-// document.querySelector('#answer4').innerHTML =
+var morethan8 = _.filter(materials.length > 8 || materials.length == 8)
+  function(){
+    return materials.title, materials.quantity, materials.materials;
+    console.log(items.title, items.quantity, items.materials);
+  });
 
+// ??????
 
-
-//ANSWER5
 // document.querySelector('#answer5').innerHTML =
 
-
-
-
-
 //ANSWER6
-// document.querySelector('#answer6').innerHTML =
+var whoMade = items.valueOf("materials");
+var Made = items.valueOf("who_made");
+var iDid = _.contains("i_did");
+var iMade = _.pluck("who_made", "i_did");
+iMade.length;
 
-
-
-
-
-
+$('#answer6').text(iMade.length);
+// document.querySelector('#answer6').innerHTML = (iMAde.length)
 
 // _.times(100, function() {
 //   console.log("hi");
